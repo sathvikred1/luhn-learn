@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   THEME — CSS CUSTOM PROPERTIES
+   ============================================================ */
+:root {
+  /* Surfaces */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #f1f3f5;
+
+  /* Text */
+  --text-primary: #1a1a2e;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+
+  /* Borders */
+  --border-color: #e5e7eb;
+  --border-hover: #d1d5db;
+
+  /* Brand */
+  --brand-primary: #6c5ce7;
+  --brand-primary-hover: #5b4bd5;
+  --brand-primary-light: #ede9fe;
+  --brand-secondary: #00b894;
+  --brand-accent: #ff6b6b;
+  --brand-accent-hover: #ee5a5a;
+
+  /* Node depth colors */
+  --node-root: #6c5ce7;
+  --node-root-text: #ffffff;
+  --node-level1: #ffffff;
+  --node-level1-border: #6c5ce7;
+  --node-level1-text: #1a1a2e;
+  --node-level2: #f0fff4;
+  --node-level2-border: #38a169;
+  --node-level2-text: #1a1a2e;
+  --node-level3: #fff5f5;
+  --node-level3-border: #e53e3e;
+  --node-level3-text: #1a1a2e;
+
+  /* Edges */
+  --edge-color: #cbd5e0;
+  --edge-label-bg: #ffffff;
+  --edge-label-text: #718096;
+  --edge-label-border: #e2e8f0;
+
+  /* Toolbar */
+  --toolbar-bg: #ffffff;
+  --toolbar-border: #e5e7eb;
+  --toolbar-button-hover: #f3f4f6;
+
+  /* Detail panel */
+  --panel-bg: #ffffff;
+  --panel-border: #e5e7eb;
+}
+
+.dark {
+  /* Surfaces */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+
+  /* Text */
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #64748b;
+
+  /* Borders */
+  --border-color: #334155;
+  --border-hover: #475569;
+
+  /* Brand */
+  --brand-primary: #818cf8;
+  --brand-primary-hover: #6366f1;
+  --brand-primary-light: #1e1b4b;
+  --brand-secondary: #00b894;
+  --brand-accent: #ff6b6b;
+  --brand-accent-hover: #ee5a5a;
+
+  /* Node depth colors */
+  --node-root: #6c5ce7;
+  --node-root-text: #ffffff;
+  --node-level1: #1e3a5f;
+  --node-level1-border: #60a5fa;
+  --node-level1-text: #e2e8f0;
+  --node-level2: #1a3a2a;
+  --node-level2-border: #34d399;
+  --node-level2-text: #d1fae5;
+  --node-level3: #3a1a2a;
+  --node-level3-border: #fb7185;
+  --node-level3-text: #ffe4e6;
+
+  /* Edges */
+  --edge-color: #475569;
+  --edge-label-bg: #1e293b;
+  --edge-label-text: #94a3b8;
+  --edge-label-border: #334155;
+
+  /* Toolbar */
+  --toolbar-bg: #1e293b;
+  --toolbar-border: #334155;
+  --toolbar-button-hover: #334155;
+
+  /* Detail panel */
+  --panel-bg: #1e293b;
+  --panel-border: #334155;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Sora', sans-serif;
+}
+
+/* Gradient brand text helper */
+.gradient-text {
+  background: linear-gradient(90deg, #6c5ce7 0%, #00b4d8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-hover);
+  border-radius: 9999px;
+}
+
+/* ============================================================
+   REACT FLOW OVERRIDES
+   ============================================================ */
+.react-flow__attribution {
+  display: none;
+}
+
+.react-flow__edge-path {
+  stroke: var(--edge-color);
+}
+
+.react-flow__handle {
+  opacity: 0;
+  pointer-events: none;
+}
