@@ -32,4 +32,4 @@ LuhnLearn helps students create visual concept maps, add their own notes/images,
 - YouTube transcript import
 - Cloud sync
 - Collaborative study maps
-- Mobile app
+- Mobile app .

@@ -76,3 +76,19 @@ src/
 ├── utils/        graphUtils, colorUtils, formatUtils
 └── components/   layout · landing · map · modals · ui
 ```
+## Screenshots
+
+### Landing Page
+![Landing Page](screenshots/landing-page.png)
+
+### Concept Map
+![Concept Map](screenshots/concept-map.png)
+
+### Node Study Panel
+![Node Study Panel](screenshots/node-panel.png)
+
+### Quiz Mode
+![Quiz Mode](screenshots/quiz-mode.png)
+
+### Image Upload
+![Image Upload](screenshots/image-upload.png)
